@@ -49,7 +49,7 @@ export default function MessageSection() {
                 <p className="text-balance">
                   First of all, I like your killer smile. Literally jb b dekha hai uss smile pe hamesha unconciously
                   meri b smile hi ai pta nhi q. On This special day I want to confess my feelings for you that You make
-                  me feel haapiest person on earth when I'm with you
+                  me feel happiest person on earth when I'm with you
                 </p>
 
                 <p className="text-balance">

@@ -73,9 +73,9 @@ export default function MusicSection() {
                 {isPlaying ? "Now playing our special song..." : "Click to play a romantic melody"}
               </p>
 
-              {/* Placeholder audio - replace with actual audio file */}
+              {/* Use local audio file from public/music */}
               <audio ref={audioRef} loop onEnded={() => setIsPlaying(false)}>
-                <source src="/placeholder-audio.mp3" type="audio/mpeg" />
+                <source src="/music/birthday-song.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>

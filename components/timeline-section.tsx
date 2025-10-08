@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
+const Typewriter = dynamic(() => import("@/components/ui/typewriter"), { ssr: false })
 import { Card } from "@/components/ui/card"
 
 const milestones = [
@@ -14,44 +16,44 @@ const milestones = [
   {
     title: "When We Met",
     date: "7 Sept, 2023",
-    description: "A Magical Evening, Nervous butterflies, endless conversation, and the realization that I never wanted the time to end.",
+    description: "A magical evening — nervous butterflies, endless conversation, and the realization that I never wanted the time to end.",
     emoji: "🌹",
   },
   {
-    title: "Our First  Date",
-    date: "15 Sept,2023",
-    description: "From a spontaneous road trip to quiet moments at Pizza Crunch, every moment with you is my favorite.Woh Road blocks na hote to shyd first impression acha jata 😂",
+    title: "Our First Date",
+    date: "15 Sept, 2023",
+    description: "From a spontaneous road trip to quiet moments at Pizza Crunch — every moment with you is my favorite. Agar roadblocks na hote, to shayad first impression aur achha jata 😂",
     emoji: "🗺️",
   },
   {
     title: "Jinnah Park Date",
-    date: "6 Oct,2023",
-    description: "Those hours made me feel really happy. Aj b yaad woh time kitni jldi guzar gya tha😂. Aur woh special Walk first time hi kisi lrki k sath chla tha aise park me 🙃",
+    date: "6 Oct, 2023",
+    description: "Those hours made me feel really happy. Aaj bhi yaad hai — woh time kitni jaldi guzar gaya tha 😂. Aur woh special walk, pehli dafa kisi ladki ke saath park mein chalna 🙃",
     emoji: "😂",
   },
   {
-    title: "Heart Made using Hands",
-    date: "24 Oct,2023",
+    title: "Heart Made Using Hands",
+    date: "24 Oct, 2023",
     description:
-      "Cheezious me bnaya hua Heart bht bezzat krwaya tha uss ne ghr walo se😂.But I must Say felt really special ",
+      "Cheezious mein banaya hua heart bohot beizzati karwayi thi usne ghar walon se 😂. But I must say, it felt really special.",
     emoji: "💑",
   },
   {
-    title: "Purposal",
-    date: "15 Nov,2023",
-    description: "First time purpose kea tha mene kisi lrki ko. Phir b Flower wapis kr dea ap ne iss k liye kabhi maaf nhi kru ga 😭 ",
+    title: "Proposal",
+    date: "15 Nov, 2023",
+    description: "First time propose kiya tha maine kisi ladki ko. Phir bhi flower wapas kar diya aap ne — iske liye kabhi maaf nahi karunga 😭",
     emoji: "🎁",
   },
   {
     title: "Faisal Mosque Trip",
-    date: "17 Nov,2023",
-    description: "Best Day Ever spent with you. First time itna time dea gya tha. Aur woh hath pkrna yaad to bht ata pka gira deta me 😂 itna awkward tareeka tha mera😭",
+    date: "17 Nov, 2023",
+    description: "Best day ever spent with you. Pehli dafa itna time diya gaya tha. Aur woh haath pakarna — yaad aata hai, bilkul girane wala tha 😂 itna awkward tareeqa tha mera 😭",
     emoji: "💕",
   },
   {
     title: "Chae Khana Trip",
-    date: "1 Oct,2025",
-    description: "Very Long Break but Really worth it. Roz special Days hon toh aam lgne lg jate lkn ap k sath hr din special hi raha breaks k baad aur b special ho jata.Aik cheez jis ka gila raha Pic to bna leni chahiye thi hume sath😂",
+    date: "1 Oct, 2025",
+    description: "Very long break — but really worth it. Roz special days hon to aam lagne lag jate, lekin aap ke saath har din special hi raha. Breaks ke baad to aur bhi special ho jata. Bas ek gila: humne saath picture bana leni chahiye thi 😂",
     emoji: "💕",
   },
   {
@@ -102,7 +104,12 @@ export default function TimelineSection() {
                 <Card className="border-2 border-romantic-pink bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
                   <h3 className="elegant mb-2 text-2xl font-bold text-romantic-red">{milestone.title}</h3>
                   <p className="cursive mb-3 text-lg text-romantic-rose">{milestone.date}</p>
-                  <p className="text-balance leading-relaxed text-muted-foreground">{milestone.description}</p>
+                  <Typewriter
+                    className="block text-balance leading-relaxed text-muted-foreground"
+                    text={milestone.description}
+                    speed={18}
+                    startOnView={true}
+                  />
                 </Card>
               </div>
             </motion.div>

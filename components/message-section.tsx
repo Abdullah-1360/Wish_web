@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
+const Typewriter = dynamic(() => import("@/components/ui/typewriter"), { ssr: false })
 import { Card } from "@/components/ui/card"
 
 export default function MessageSection() {
@@ -40,28 +42,37 @@ export default function MessageSection() {
               <div className="space-y-6 text-lg leading-relaxed text-foreground md:text-xl">
                 <p className="cursive text-2xl text-rose-500 md:text-3xl">My Dearest Love,</p>
 
-                <p className="text-balance">
-                  On this special day, as you turn 22, I want you to know how blessed I feel to have you in my life. You
-                  are the sunshine that brightens my darkest days, the laughter that fills my heart with joy, and the
-                  love that makes every moment worth living.
-                </p>
+                <Typewriter
+                  className="block text-balance"
+                  text="On this special day, as you turn 22, I want you to know how blessed I feel to have you in my life. You are the sunshine that brightens my darkest days, the laughter that fills my heart with joy, and the love that makes every moment worth living."
+                  speed={25}
+                  startDelay={1500}
+                  startOnView={true}
+                />
 
-                <p className="text-balance">
-                  First of all, I like your killer smile. Literally jb b dekha hai uss smile pe hamesha unconciously
-                  meri b smile hi ai pta nhi q. On This special day I want to confess my feelings for you that You make
-                  me feel happiest person on earth when I'm with you
-                </p>
+                <Typewriter
+                  className="block text-balance"
+                  text="First of all, I love your killer smile. Jab bhi us smile ko dekha hai, hamesha unconsciously mere bhi chehre par muskurahat aa jati hai — pata nahi kyun. On this special day, I want to confess my feelings: you make me the happiest person on earth when I'm with you."
+                  speed={25}
+                  startDelay={8000}
+                  startOnView={true}
+                />
 
-                <p className="text-balance">
-                  Beshak hum bht km time k liye hi milte lkn yar woh time priceless feel hota koi aur cheez se mujhe
-                  itni khushi nhi hui aj tk jitna ap k sath reh k hoti mujhe
-                </p>
+                <Typewriter
+                  className="block text-balance"
+                  text="Beshak hum bohot kam time ke liye milte hain, lekin yaar woh time priceless hota hai. Koi aur cheez mujhe itni khushi nahi deti jitni aap ke saath reh kar milti hai — aaj tak."
+                  speed={25}
+                  startDelay={14000}
+                  startOnView={true}
+                />
 
-                <p className="text-balance">
-                  Thank you for filling my life with love, laughter, and endless happiness.You are my favorite person,
-                  my safe place, and my greatest blessing, Crime partner. I hope this birthday brings you as much joy as
-                  you've brought into my life.I love you endlessly — today, tomorrow, and always. 💞
-                </p>
+                <Typewriter
+                  className="block text-balance"
+                  text="Thank you for filling my life with love, laughter, and endless happiness. You are my favorite person, my safe place, and my greatest blessing — my crime partner. I hope this birthday brings you as much joy as you've brought into my life. I love you endlessly — today, tomorrow, and always. 💞"
+                  speed={25}
+                  startDelay={19000}
+                  startOnView={true}
+                />
 
                 <motion.p
                   className="cursive text-2xl text-rose-600 md:text-3xl"
